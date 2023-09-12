@@ -14,7 +14,7 @@ A simple and visually appealing music player web application created using HTML,
 
 ## Demo
 
-You can try the Music Player live at [Demo Link](https://your-demo-link.com).
+You can try the Music Player live at [Demo Link](https://music-player-tejas242.vercel.app/).
 
 ## Usage
 
@@ -32,4 +32,4 @@ Contributions are welcome! Feel free to open issues and pull requests.
 Thanks to Unsplash for providing stunning album cover images.
 
 ## Author
-[Tejas Mahajan]("https://github.com/tejas242")
+[Tejas Mahajan](https://github.com/tejas242)
