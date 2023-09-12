@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(279deg, #c70039, #f94c10, #f8de22);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.music-player {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.song-info {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto 20px;
+}
+
+#album-cover {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(255, 94, 0, 0.8);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 94, 0, 0.8);
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.time {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 200px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 94, 0, 0.8);
+  transition: width 0.1s linear;
+  position: relative;
+}
+
+.indicator {
+  width: 0;
+  height: 10px;
+  background-color: rgba(255, 94, 0, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  top: -2.5px;
+  left: 0;
+  transition: left 0.1s linear;
+}
+
+footer {
+  padding: 10px 0;
+  color: #000000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
