@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(279deg, #c70039, #f94c10, #f8de22);
+  background: linear-gradient(279deg, #FFCC70, #DAC0A3, #F8F0E5);
   background-size: 180% 180%;
   animation: gradient-animation 15s ease infinite;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  background: linear-gradient(45deg, #ffd700, #ffa500);
+  background: linear-gradient(45deg, #FFFADD,#DAC0A3 );
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -34,6 +34,15 @@ body {
   margin: 0 auto;
   transition: background-color 0.3s ease;
   position: relative;
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+  .music-player {
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
 }
 
 .music-player {
