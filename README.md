@@ -12,7 +12,7 @@ A simple and visually appealing music player web application created using HTML,
 
 ## Demo
 
-You can try the Music Player live at [Demo Link](#).
+You can try the Music Player live [here](https://music-player-tejas242.vercel.app/).
 
 ## Installation
 
