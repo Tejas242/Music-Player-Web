@@ -54,12 +54,85 @@ Thanks to Unsplash for providing stunning album cover images.
 
 ## Roadmap
 
-Here are some planned enhancements for this project:
+Here's an expanded roadmap with a variety of tasks for Music Player project, ranging from very basic to more advanced:
 
-- [ ] Add support for creating and managing playlists.
-- [ ] Implement shuffle and repeat functionality.
-- [ ] Enhance the user interface with custom themes.
-- [ ] Integrate with music streaming services for song recommendations.
+### Basic Tasks:
+
+- [ ] **Change Color Theme:**
+  - Allow users to switch between different color themes for the user interface.
+  - *Level: Beginner*
+
+- [ ] **Custom Font Options:**
+  - Implement options for users to choose from different fonts for the player interface.
+  - *Level: Beginner*
+
+- [ ] **Volume Control:**
+  - Add a volume control slider to adjust the audio volume.
+  - *Level: Beginner*
+
+- [ ] **Lyrics Display:**
+  - Include a lyrics display area that shows the lyrics of the currently playing song.
+  - *Level: Intermediate*
+
+- [ ] **Customizable Album Cover Styles:**
+  - Allow users to customize the style (e.g., borders, shadows) of the album cover image.
+  - *Level: Beginner*
+
+- [ ] **Playlist Sorting:**
+  - Enable users to sort their playlists by title, artist, or other criteria.
+  - *Level: Intermediate*
+
+- [ ] **Social Sharing Integration:**
+  - Add social media sharing buttons to let users share their currently playing song on platforms like Twitter or Facebook.
+  - *Level: Intermediate*
+
+### Intermediate Tasks:
+
+- [ ] **Dynamic Backgrounds:**
+  - Implement dynamic backgrounds that change based on the currently playing song's mood or genre.
+  - *Level: Intermediate*
+
+- [ ] **Offline Mode:**
+  - Create a feature that allows users to download songs for offline listening.
+  - *Level: Intermediate*
+
+- [ ] **Equalizer Settings:**
+  - Add an equalizer with presets for different audio enhancements.
+  - *Level: Intermediate*
+
+- [ ] **Song Recommendations:**
+  - Integrate with music streaming services to provide song recommendations based on the user's listening history.
+  - *Level: Intermediate*
+
+- [ ] **Search Functionality:**
+  - Implement a search bar for users to quickly find songs in their playlist.
+  - *Level: Intermediate*
+
+### Advanced Tasks:
+
+- [ ] **Voice Commands:**
+  - Enable voice commands to control the music player (e.g., "Play next song").
+  - *Level: Advanced*
+
+- [ ] **Offline Lyrics Sync:**
+  - Allow users to sync and view lyrics even in offline mode.
+  - *Level: Advanced*
+
+- [ ] **Visualizer Effects:**
+  - Add visualizer effects that respond to the music's beat and frequency.
+  - *Level: Advanced*
+
+- [ ] **Integration with Music APIs:**
+  - Integrate your music player with external music APIs (e.g., Spotify, Last.fm) for additional features and data.
+  - *Level: Advanced*
+
+- [ ] **Advanced Cross-Platform Compatibility:**
+  - Ensure your music player works seamlessly on various operating systems and browsers.
+  - *Level: Advanced*
+
+- [ ] **User Profiles and Personalization:**
+  - Create user profiles to offer personalized recommendations and playlists.
+  - *Level: Advanced*
 
 ## Contact
 
