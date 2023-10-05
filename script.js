@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
       ? '<i class="fas fa-pause"></i>'
       : '<i class="fas fa-play"></i>';
   }
+  //Function to update the duration of the audio when it is loaded
+  audio.onloadeddata = function () {
+    const currentTime = formatTime(audio.currentTime);
+    const duration = formatTime(audio.duration);
+    timeDisplay.textContent = currentTime + " / " + duration;
+  }
 
   // Event listener for timeupdate to update the progress bar
   audio.addEventListener("timeupdate", function () {
