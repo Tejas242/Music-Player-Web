@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function changeFont() {
         const fontSelector = document.getElementById('font-selector');
         const selectedFont = fontSelector.value;
-        const musicPlayer = document.getElementById('music-player');
+        const musicPlayer = document.getElementById('Music');
 
         musicPlayer.style.fontFamily = selectedFont;
     }

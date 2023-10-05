@@ -188,9 +188,37 @@ footer a:hover {
 }
 
 #font-button{
-  padding: 4px 6px;
+  padding: 4px 15px; 
+  background-color: #2b2c2c; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+  font-size: medium;
+  margin-top: 0px;
+ 
+}
+#font-button:hover {
+  background-color: rgb(70, 70, 70);
 }
 
 .button-container{
-  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.select-button-container {
+  display: flex;
+  flex-direction: column;
+}
+.label{
+  font-weight: bold; 
+  margin-right: 5px;
+}
+#font-selector{
+  margin-left: 5px;
+  padding: 3px; 
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #ffd700;
 }
