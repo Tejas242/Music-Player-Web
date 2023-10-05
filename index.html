@@ -26,36 +26,35 @@
       </div>
     <div class="container">
       <div class="music-player" id="music-player">
-     
         <div class="image-container">
           <div class="image-border">
             <img id="album-cover" src="" alt="Album Cover" />
           </div>
         </div>
         <h1>Music Player</h1>
-        <div class="song-info">
-          <span class="song-title"></span>
-        </div>
-        <audio id="audio"></audio>
-        <div class="controls">
-          <button id="prev" class="transparent">
-            <i class="fas fa-step-backward"></i>
-          </button>
-          <button id="play-pause" class="transparent">
-            <i class="fas fa-play"></i>
-          </button>
-          <button id="next" class="transparent">
-            <i class="fas fa-step-forward"></i>
-          </button>
-        </div>
-        <div class="progress-bar">
-          <div class="time" id="time">0:00 / 0:00</div>
-          <div class="progress-container">
-            <div class="progress" id="progress">
-              <div class="indicator"></div>
-            </div>
+      <div class="song-info">
+        <span class="song-title"></span>
+      </div>
+      <audio id="audio" preload="metadata"></audio>
+      <div class="controls">
+        <button id="prev" class="transparent">
+          <i class="fas fa-step-backward"></i>
+        </button>
+        <button id="play-pause" class="transparent">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="transparent">
+          <i class="fas fa-step-forward"></i>
+        </button>
+      </div>
+      <div class="progress-bar">
+        <div class="time" id="time">0:00 / 0:00</div>
+        <div class="progress-container">
+          <div class="progress" id="progress">
+            <div class="indicator"></div>
           </div>
         </div>
+      </div>
       </div>
     </div>
     </div>
