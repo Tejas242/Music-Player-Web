@@ -20,16 +20,22 @@ To run this music player locally on your machine, follow these steps:
 
 1. Clone this repository to your local machine.
    ```bash
-   git clone https://github.com/Tejas242/Music-Player-Web.git
+   git clone <repoistory URL>
    ```
-2. Open the project folder and launch the `index.html` file in your web browser.
+2. Open the project folder and launch the `index.html` file in your IDE (for example Visual Studio Code)
+   
+   ![Screenshot 2](https://raw.githubusercontent.com/Tejas242/Music-Player-Web/main/Screenshots/Screenshot2.png)
+
+3. Click on "Go Live" to launch the page on your web browser.
+
+   ![Screenshot 3](https://raw.githubusercontent.com/Tejas242/Music-Player-Web/main/Screenshots/Screenshot3.png)
+
+4. Now, the home page of the app loads up on your browser on your local host.
+
+   ![Music Player Screenshot](https://raw.githubusercontent.com/Tejas242/Music-Player-Web/main/Screenshots/screenshot.png)
 
 ## Usage
 Click the play/pause button to control playback. Use the previous and next buttons to navigate between songs. See the progress of the current song on the progress bar. Enjoy beautiful album cover art fetched from Unsplash.
-
-## Screenshots
-
-![Music Player Screenshot](screenshot.png)
 
 ## Contributing
 
@@ -54,7 +60,7 @@ Thanks to Unsplash for providing stunning album cover images.
 
 ## Roadmap
 
-Here's an expanded roadmap with a variety of tasks for Music Player project, ranging from very basic to more advanced:
+Here's an expanded roadmap with a variety of tasks for the Music Player project, ranging from very basic to more advanced:
 
 ### Basic Tasks:
 
@@ -83,7 +89,7 @@ Here's an expanded roadmap with a variety of tasks for Music Player project, ran
   - *Level: Intermediate*
 
 - [ ] **Social Sharing Integration:**
-  - Add social media sharing buttons to let users share their currently playing song on platforms like Twitter or Facebook.
+  - Add social media sharing buttons to let users share their currently playing songs on platforms like Twitter or Facebook.
   - *Level: Intermediate*
 
 ### Intermediate Tasks:
@@ -105,7 +111,7 @@ Here's an expanded roadmap with a variety of tasks for Music Player project, ran
   - *Level: Intermediate*
 
 - [ ] **Search Functionality:**
-  - Implement a search bar for users to quickly find songs in their playlist.
+  - Implement a search bar for users to quickly find songs in their playlists.
   - *Level: Intermediate*
 
 ### Advanced Tasks:
