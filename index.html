@@ -11,8 +11,22 @@
     />
   </head>
   <body>
+    <div id="Music">
+      <div class="button-container"> 
+        <label for="font-selector"class="label"></label>
+        <div class="select-button-container">
+        <select id="font-selector">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Times New Roman, serif">Times Roman</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+        </select>
+        <button id="font-button">Apply Font</button>
+        </div>
+      </div>
     <div class="container">
-      <div class="music-player">
+      <div class="music-player" id="music-player">
+     
         <div class="image-container">
           <div class="image-border">
             <img id="album-cover" src="" alt="Album Cover" />
@@ -43,6 +57,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <footer>
       <p>
