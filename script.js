@@ -19,6 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
     { title: "Summer Walk", src: "songs/summer-walk.mp3", imgUrl: "" },
   ];
 
+  document.addEventListener("keydown", function (event) {
+    console.log("keyyyy");
+    switch (event.key) {
+      case " ": // Spacebar for play/pause
+        togglePlayPause();
+        break;
+      case "ArrowRight":
+        playNextSong();
+        break;
+      case "ArrowLeft":
+        playPreviousSong();
+        break;
+    }
+  });
+  
+
   // Function to load and play the current song
   function loadAndPlayCurrentSong() {
     audio.src = songs[currentSongIndex].src;
@@ -54,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to toggle play/pause
   function togglePlayPause() {
+    // console.log("Toggle play/pause called");
     if (isPlaying) {
       audio.pause();
     } else {
@@ -99,19 +116,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for the play/pause button
   playPauseButton.addEventListener("click", togglePlayPause);
 
-  // Event listener for the next button
-  nextButton.addEventListener("click", function () {
+  function playNextSong() {
     resetProgressBar();
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     loadAndPlayCurrentSong();
-  });
+  }
 
-  // Event listener for the previous button
-  prevButton.addEventListener("click", function () {
+  // Event listener for the next button
+  nextButton.addEventListener("click", playNextSong);
+
+  function playPreviousSong() {
     resetProgressBar();
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
     loadAndPlayCurrentSong();
-  });
+  }
+
+  // Event listener for the previous button
+  prevButton.addEventListener("click", playPreviousSong);
+
+
 
   // Function to format time (e.g., "0:00")
   function formatTime(time) {
@@ -121,6 +144,25 @@ document.addEventListener("DOMContentLoaded", function () {
     return formattedTime;
   }
 
-  // Load and play the initial song
-  loadAndPlayCurrentSong();
+
+
+    const fontButton = document.getElementById("font-button");
+
+    fontButton.addEventListener("click", function () {
+        changeFont();
+    });
+
+    function changeFont() {
+        const fontSelector = document.getElementById('font-selector');
+        const selectedFont = fontSelector.value;
+        const musicPlayer = document.getElementById('Music');
+
+        musicPlayer.style.fontFamily = selectedFont;
+    }
+
+    // Load and play the initial song
+    loadAndPlayCurrentSong();
+
 });
+
+
