@@ -35,7 +35,7 @@ select {
 
 .container {
   background: linear-gradient(45deg, #ffd700, #ffa500);
-  padding: 20px;
+  padding: 2px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 400px;
