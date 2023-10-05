@@ -115,6 +115,25 @@ document.addEventListener("DOMContentLoaded", function () {
     return formattedTime;
   }
 
-  // Load and play the initial song
-  loadAndPlayCurrentSong();
+
+
+    const fontButton = document.getElementById("font-button");
+
+    fontButton.addEventListener("click", function () {
+        changeFont();
+    });
+
+    function changeFont() {
+        const fontSelector = document.getElementById('font-selector');
+        const selectedFont = fontSelector.value;
+        const musicPlayer = document.getElementById('music-player');
+
+        musicPlayer.style.fontFamily = selectedFont;
+    }
+
+    // Load and play the initial song
+    loadAndPlayCurrentSong();
+
 });
+
+

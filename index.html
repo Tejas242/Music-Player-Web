@@ -12,7 +12,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="music-player">
+      <div class="music-player" id="music-player">
+        <div class="button-container"> 
+        <label for="font-selector">Select a font:</label>
+        <select id="font-selector">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Times New Roman, serif">Times New Roman</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+        </select>
+        <button id="font-button">Apply Font</button>
+      </div>
         <div class="image-container">
           <div class="image-border">
             <img id="album-cover" src="" alt="Album Cover" />

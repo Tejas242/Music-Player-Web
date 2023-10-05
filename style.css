@@ -11,6 +11,15 @@ body {
   background-size: 180% 180%;
   animation: gradient-animation 15s ease infinite;
 }
+#music-player {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+select {
+  margin-bottom: 10px;
+}
 
 @keyframes gradient-animation {
   0% {
@@ -176,4 +185,12 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+#font-button{
+  padding: 4px 6px;
+}
+
+.button-container{
+  display: inline-block;
 }
