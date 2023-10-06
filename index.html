@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
   </head>
   <body>
+   
     <div id="Music">
       <div class="button-container"> 
         <label for="font-selector"class="label"></label>
@@ -58,6 +60,7 @@
       </div>
     </div>
     </div>
+  
     <footer>
       <p>
         Coded with <i class="fas fa-heart"></i> by
@@ -66,5 +69,10 @@
     </footer>
     <audio id="audio" preload="auto"></audio>
     <script src="script.js"></script>
+    <div class="share-buttons">
+      <!-- Social media sharing buttons -->
+    <button id="share-twitter"><i class="fi fi-brands-twitter">Share on Twitter</i></button>
+    <button id="share-facebook"><i class="fi fi-brands-facebook">Share on Facebook</i></button>
+  </div>
   </body>
 </html>

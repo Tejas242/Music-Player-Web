@@ -162,6 +162,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load and play the initial song
     loadAndPlayCurrentSong();
+    document.getElementById('share-twitter').addEventListener('click', shareOnTwitter);
+    document.getElementById('share-facebook').addEventListener('click', shareOnFacebook);
+
+    function shareOnTwitter() {
+        const songTitle = "Currently playing song title"; // Replace with your song title
+        const songUrl = "https://your-website.com/song-url"; // Replace with the URL of the song
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Now playing: ${songTitle} ${songUrl}`)}`;
+        window.open(twitterUrl, '_blank');
+    }
+
+    function shareOnFacebook() {
+        const songTitle = "Currently playing song title"; // Replace with your song title
+        const songUrl = "https://your-website.com/song-url"; // Replace with the URL of the song
+        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(songUrl)}&quote=${encodeURIComponent(`Now playing: ${songTitle}`)}`;
+        window.open(facebookUrl, '_blank');
+    }  
 
 });
 
