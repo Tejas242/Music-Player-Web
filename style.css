@@ -231,3 +231,20 @@ footer a:hover {
   border-radius: 5px;
   background-color: #ffd700;
 }
+.share-buttons{
+ 
+  position: fixed;
+  padding-bottom: 500px;
+  padding-left: 1000px;
+  
+ 
+  
+}
+button{
+  height: 30px;
+  font-size: 15px;
+  
+  align-items: center;
+  display: flex;
+}
+
