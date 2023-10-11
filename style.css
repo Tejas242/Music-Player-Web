@@ -246,3 +246,21 @@ footer a:hover {
   border-radius: 5px;
   background-color: #ffd700;
 }
+
+/* Default theme for the dropdown container */
+.theme-dropdown-container.theme-default {
+  
+  color: #000;
+}
+
+/* Theme 1 for the dropdown container */
+.theme-dropdown-container.theme1 {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+/* Theme 2 for the dropdown container */
+.theme-dropdown-container.theme2 {
+  background-color: #3399ff;
+  color: #fff;
+}
