@@ -165,4 +165,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// Function to change the theme based on the selected option
+function changeTheme() {
+  const themeSelector = document.getElementById("theme-selector");
+  const selectedOption = themeSelector.options[themeSelector.selectedIndex];
+  const selectedTheme = selectedOption.getAttribute("data-theme");
 
+  document.body.className = selectedTheme;
+  document.getElementById("music").className = selectedTheme;
+}
+
+// Theme selector event listener
+document.getElementById("theme-selector").addEventListener("change", changeTheme);
+
+// Set the initial theme based on the selected option
+changeTheme();

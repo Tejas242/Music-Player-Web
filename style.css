@@ -1,3 +1,4 @@
+/** Default theme */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -10,6 +11,20 @@ body {
   background: linear-gradient(279deg, #c70039, #f94c10, #f8de22);
   background-size: 180% 180%;
   animation: gradient-animation 15s ease infinite;
+}
+
+/* Theme 1 */
+body.theme1 {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(279deg, #ff5733, #edf67d, #fc3d21);
+  
+}
+
+/* Theme 2 */
+body.theme2 {
+  font-family: 'Verdana', sans-serif;
+  background: linear-gradient(45deg, #ff66cc, #3399ff);
+
 }
 #music-player {
   width: 300px;
