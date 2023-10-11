@@ -165,18 +165,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// Function to change the theme based on the selected option
-function changeTheme() {
-  const themeSelector = document.getElementById("theme-selector");
-  const selectedOption = themeSelector.options[themeSelector.selectedIndex];
-  const selectedTheme = selectedOption.getAttribute("data-theme");
-
-  document.body.className = selectedTheme;
-  document.getElementById("music").className = selectedTheme;
+// Function to change the theme for the dropdown container
+function changeDropdownTheme(selectedTheme) {
+  const dropdownContainer = document.querySelector('.theme-dropdown-container');
+  dropdownContainer.className = `theme-dropdown-container ${selectedTheme}`;
 }
 
 // Theme selector event listener
-document.getElementById("theme-selector").addEventListener("change", changeTheme);
+document.getElementById('theme-selector').addEventListener('change', function () {
+  const selectedOption = this.options[this.selectedIndex];
+  const selectedTheme = selectedOption.getAttribute('data-theme');
+
+  // Apply the selected theme to the page and the dropdown container
+  document.body.className = selectedTheme;
+  document.getElementById('music').className = selectedTheme;
+  changeDropdownTheme(selectedTheme);
+});
 
 // Set the initial theme based on the selected option
-changeTheme();
+changeDropdownTheme(document.getElementById('theme-selector').options[0].getAttribute('data-theme'));
+
