@@ -11,6 +11,7 @@ body {
   background: linear-gradient(279deg, #c70039, #f94c10, #f8de22);
   background-size: 180% 180%;
   animation: gradient-animation 15s ease infinite;
+  
 }
 
 /* Theme 1 */
@@ -265,3 +266,4 @@ footer a:hover {
   background-color: #3399ff;
   color: #fff;
 }
+
