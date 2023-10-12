@@ -164,5 +164,14 @@ document.addEventListener("DOMContentLoaded", function () {
     loadAndPlayCurrentSong();
 
 });
-
-
+var color_selection=document.querySelectorAll('.select_color')
+var color_array=['#81CACF','#E68398','#7EDE80'];
+var container=document.querySelector('.container');
+var image=document.querySelector('.image-container');
+color_selection.forEach(item =>{
+  item.addEventListener('click',()=>{
+    var getItemNumber=item.getAttribute('data-number');
+    document.body.style.background=color_array[getItemNumber-1];
+    container.style.background='none';
+  })
+})
