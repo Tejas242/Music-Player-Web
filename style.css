@@ -16,7 +16,8 @@ body {
 /* Theme 1 */
 body.theme1 {
   font-family: 'Georgia', serif;
-  background: linear-gradient(279deg, #ff5733, #edf67d, #fc3d21);
+  background: linear-gradient(135deg, #00b4db, #0083b0, #061161);
+
   
 }
 
