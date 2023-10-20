@@ -266,3 +266,7 @@ footer a:hover {
   border-radius: 5px;
   background-color: #ffd700;
 }
+#canvas{
+  position: absolute;
+  transform: translate(50% - max-width, 50%- max-height);
+}

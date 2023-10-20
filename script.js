@@ -1,4 +1,95 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload =  function () {
+  var ctx;
+  var width, height;
+
+  var dataArray;
+  var analyser;
+
+  var run = true;
+
+  var hue = 0;
+  var hueAdd = 1;
+
+  let theCanvas = document.querySelector("#canvas");
+
+  theCanvas.width = 1200;
+  theCanvas.height = 700;
+
+  width = theCanvas.width;
+  height = theCanvas.height;
+
+  ctx = theCanvas.getContext("2d");
+  let audioElement,audioCtx,source,bufferLength;
+
+  function startVis() {
+      // request frame
+      audioElement = document.getElementById("audio");
+
+      // make sure AudioContext will work fine in different browsers
+      audioCtx = new AudioContext();
+
+      // copy audio source data to manipulate later
+      source = audioCtx.createMediaElementSource(audioElement);
+
+      // create audio analyser
+      analyser = audioCtx.createAnalyser();      
+
+      // set audio analyser
+      analyser.fftSize = 256;
+      bufferLength = analyser.frequencyBinCount;
+      dataArray = new Uint8Array(bufferLength);
+
+      // Bind our analyser to the media element source.
+      source.connect(analyser);
+      source.connect(audioCtx.destination);
+
+      audioVisualize();
+  }  
+  //Circle Spikes Visualization
+  function audioVisualize() {
+    if( !run ) {
+      return;
+    }
+    analyser.getByteTimeDomainData(dataArray);
+    
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.rect(0, 0, width, height);
+    ctx.fill();
+
+    let radius = 120;
+    let cX = width/2;
+    let cY = height/2;
+
+    let radianAdd = (Math.PI*2) / dataArray.length;
+    let radian = 0;
+    ctx.strokeStyle = "hsl(" + hue + ", 100%, 75%)";
+    for(let i=0; i<dataArray.length; i++) {
+        let x = radius * Math.cos(radian) *2+ cX;
+        let y = radius * Math.sin(radian) *2+ cY;
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+
+        v = dataArray[i];
+        if( v < radius ) {
+            v = radius;
+        }
+        x = v * Math.cos(radian) *2+ cX;
+        y = v * Math.sin(radian) *2+ cY;
+
+        ctx.lineTo(x, y);
+        ctx.stroke();
+
+        radian += radianAdd;
+    }
+    hue += hueAdd;
+    if( hue > 360 ) {
+        hue = 0;
+    }
+
+    requestAnimationFrame(audioVisualize);
+  }
+
   const audio = document.getElementById("audio");
   const playPauseButton = document.getElementById("play-pause");
   const prevButton = document.getElementById("prev");
@@ -49,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load the next song's image in advance
     prefetchNextImage();
+    startVis();
   }
 
   // Function to prefetch the image for the next song
@@ -163,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load and play the initial song
     loadAndPlayCurrentSong();
 
-});
+};
 var color_selection=document.querySelectorAll('.select_color')
 var color_array=['#81CACF','#E68398','#7EDE80'];
 var container=document.querySelector('.container');
