@@ -11,12 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentSongIndex = 0;
   let isPlaying = false;
+  let supportsMediaSession = false;
+
+  // Check the MediaSession API support of browser
+  if ('mediaSession' in navigator) {
+    supportsMediaSession = true;
+    console.log('Media Session API is supported');
+  }
 
   // Array of songs with titles and image URLs
   const songs = [
-    { title: "Happy Song", src: "songs/happy-song.mp3", imgUrl: "" },
-    { title: "Let it Go", src: "songs/let-it-go.mp3", imgUrl: "" },
-    { title: "Summer Walk", src: "songs/summer-walk.mp3", imgUrl: "" },
+    { title: "Happy Song", src: "songs/happy-song.mp3", artist: "Artist 1" },
+    { title: "Let it Go", src: "songs/let-it-go.mp3", artist: "Artist 2" },
+    { title: "Summer Walk", src: "songs/summer-walk.mp3", artist: "Artist 3" },
   ];
 
   document.addEventListener("keydown", function (event) {
@@ -33,7 +40,32 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
     }
   });
-  
+
+  if (supportsMediaSession) {
+    navigator.mediaSession.setActionHandler('nexttrack', () => {
+      playNextSong();
+      console.log('Next track button pressed');
+    });
+
+    navigator.mediaSession.setActionHandler('previoustrack', () => {
+      playPreviousSong();
+      console.log('Previous track button pressed');
+    });
+
+    navigator.mediaSession.setActionHandler('pause', () => {
+      if (isPlaying) {
+        togglePlayPause();
+      }
+      console.log('Pause button pressed');
+    });
+
+    navigator.mediaSession.setActionHandler('play', () => {
+      if (!isPlaying) {
+        togglePlayPause();
+      }
+      console.log('Play button pressed');
+    });
+  }
 
   // Function to load and play the current song
   function loadAndPlayCurrentSong() {
@@ -46,6 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
       ? '<i class="fas fa-pause"></i>'
       : '<i class="fas fa-play"></i>';
     songTitle.textContent = songs[currentSongIndex].title;
+
+    if (supportsMediaSession) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: songs[currentSongIndex].title,
+        artist: songs[currentSongIndex].artist,
+        album: 'Example Album Name',
+      });
+    }
 
     // Load the next song's image in advance
     prefetchNextImage();
